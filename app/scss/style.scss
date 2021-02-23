@@ -1,6 +1,9 @@
-.test {
-    text-align: center;
-    &__box {
+body {
+    background: #000;
+}
+.menu {
+    padding: 0;
+    &__list {
         margin: 0;
     }
 }
