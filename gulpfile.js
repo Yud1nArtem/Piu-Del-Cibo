@@ -1,8 +1,9 @@
 const { src, dest, watch, parallel } = require('gulp');
 
-const scss = require('gulp-sass');
-const concat = require('gulp-concat');
+const scss        = require('gulp-sass');
+const concat      = require('gulp-concat');
 const browserSync = require('browser-sync').create();
+const uglify      = require('gulp-uglify-es').default;
 
 function browsersync() {
     browserSync.init({
@@ -12,14 +13,19 @@ function browsersync() {
     });
 }
 
-
+function scripts() {
+    return src([
+        'node_modules/jquery/dist/jquery.js',
+        'main.js'
+    ])
+}
 
 function styles() {
     return src('app/scss/style.scss')
         .pipe(scss({outputStyle: 'compressed'}))
         .pipe(concat('style.min.css'))
         .pipe(dest('app/css'))
-        .pipe(browserSync.stream)
+        .pipe(browserSync.stream())
 }
 
 function watching() {
