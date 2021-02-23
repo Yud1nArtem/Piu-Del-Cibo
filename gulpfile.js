@@ -16,8 +16,12 @@ function browsersync() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'main.js'
+        'app/js/main.js'
     ])
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(dest('app/js'))
+    .pipe(browserSync.stream())
 }
 
 function styles() {
@@ -30,11 +34,13 @@ function styles() {
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
+    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/*.html']).on('change', browserSync.reload);
 } 
 
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
+exports.scripts = scripts;
 
-exports.default = parallel(browsersync, watching);
+exports.default = parallel(scripts, browsersync, watching);
