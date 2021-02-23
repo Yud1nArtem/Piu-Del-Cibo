@@ -1,0 +1,22 @@
+{
+  "name": "piu-del-cibo",
+  "version": "1.0.0",
+  "description": "Website of Piu Del Cibo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yud1nArtem/Piu-Del-Cibo.git"
+  },
+  "author": "Yudin Artem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yud1nArtem/Piu-Del-Cibo/issues"
+  },
+  "homepage": "https://github.com/Yud1nArtem/Piu-Del-Cibo#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
