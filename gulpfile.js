@@ -1,4 +1,4 @@
-const { src, dest, watch } = require('gulp');
+const { src, dest, watch, parallel } = require('gulp');
 
 const scss = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -24,9 +24,11 @@ function styles() {
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
-    watch(['app/*.html']).concat('change', browserSync.reload);
+    watch(['app/*.html']).on('change', browserSync.reload);
 } 
 
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
+
+exports.default = parallel(browsersync, watching);
