@@ -1,8 +1,10 @@
 $mainColor: #fff;
 $hoverColor: #A7DA7E;
+$bg: linear-gradient(60deg, #363030, #534A4A);
 $fFamily: 'Lusitana', serif;
 $trans: all .6s;
 $gradient: linear-gradient(60deg, #A7DA7E, #ABE37E);
+$bgCard: #6D5E5E;
 
 * {
     margin: 0;
@@ -301,4 +303,84 @@ button {
     span {
         font-weight: bold;
     }
+}
+
+
+
+
+.section__menu {
+    padding: 100px 0;
+    background: $bg;
+}
+.menu__title {
+    position: relative;
+    font-family: $fFamily;
+    font-size: 90px;
+    letter-spacing: 3px;
+    transform: translateX(95px);
+    margin-bottom: 171px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -95px;
+        width: 65px;
+        height: 1px;
+        background-color: #fff;
+    }
+}
+.menu__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.menu__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 315px;
+    height: 365px;
+    background-color: $bgCard;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 200px;
+    transition: $trans;
+
+
+    &:nth-child(16), &:nth-child(17), &:nth-child(18) {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        background-color: #877676;
+    }
+}
+.menu__card_link {
+    padding-bottom: 40px;
+    color: $mainColor;
+    transition: $trans;
+
+    &:hover {
+        color: rgb(12, 12, 12);
+    }
+    &:hover .menu__card_img {
+        transform: translateY(-100px);
+    }
+}
+.menu__card_img {
+    width: 230px;
+    transform: translateY(-70px);
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .25);
+    margin-bottom: -50px;
+    transition: $trans;
+}
+.menu__card_title {
+    font-family: $fFamily;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
