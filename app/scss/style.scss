@@ -283,3 +283,22 @@ button {
         border: 1px solid rgba(255, 255, 255, .8);
     }
 }
+
+
+
+.section__text {
+    padding: 100px 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main__text {
+    font-family: fFamily;
+    font-size: 30px;
+    color: #929292;
+
+    span {
+        font-weight: bold;
+    }
+}
