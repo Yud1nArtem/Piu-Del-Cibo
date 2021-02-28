@@ -1,19 +1,11 @@
-$mainColor: #fff;
-$hoverColor: #A7DA7E;
-$bg: linear-gradient(60deg, #363030, #534A4A);
-$fFamily: 'Lusitana', serif;
-$trans: all .6s;
-$gradient: linear-gradient(60deg, #A7DA7E, #ABE37E);
-$bgCard: #6D5E5E;
-$titleColor: #363030;
-
+@import "variables.scss";
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    background-color: #fff;
+    background-color: #000;
     font-size: 16px;
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
@@ -40,7 +32,7 @@ button {
 }
 .header {
     height: 100vh;
-    background-image: url(../images/bg1.jpg);
+    background-image: url(../images/Bg/img-5414m1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -387,6 +379,7 @@ button {
 }
 
 .section__info {
+    background-color: #fff;
     padding: 100px 0 150px;
 }
 .info__title {
@@ -433,6 +426,7 @@ button {
 }
 .slide__img {
     height: 100%;
+    min-height: 716px;
     width: 100%;
 }
 .slick-list {
@@ -469,11 +463,11 @@ button {
 }
 .content__top_slider .slick-prev {
     left: 0;
-    background-image: url(../images/стрелкаСлайдерВлево.svg);
+    background-image: url(../images/Sliders/стрелкаСлайдерВлево.svg);
 }
 .content__top_slider .slick-next {
     left: 69px;
-    background-image: url(../images/стрелкаСлайдерВправо.svg);
+    background-image: url(../images/Sliders/стрелкаСлайдерВправо.svg);
 }
 .slider .slick-arrow.slick-disabled {
     /* background-color: rgba(0, 0, 0, .2); */
@@ -562,11 +556,11 @@ button {
 }
 .content__bottom_slider .slick-prev {
     left: 0;
-    background-image: url(../images/стрелкаСлайдерВлево.svg);
+    background-image: url(../images/Sliders/стрелкаСлайдерВлево.svg);
 }
 .content__bottom_slider .slick-next {
     left: 69px;
-    background-image: url(../images/стрелкаСлайдерВправо.svg);
+    background-image: url(../images/Sliders/стрелкаСлайдерВправо.svg);
 }
 .slider .slick-arrow.slick-disabled {
     /* background-color: rgba(0, 0, 0, .2); */
