@@ -387,7 +387,7 @@ button {
 }
 
 .section__info {
-    padding: 100px 0;
+    padding: 100px 0 150px;
 }
 .info__title {
     color: $titleColor;
@@ -511,7 +511,6 @@ button {
 .info__content_bottom {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 250px;
 }
 .content__bottom_left {
     width: 58%;
@@ -600,4 +599,59 @@ button {
     &:focus {
         background-color: #7D6D6D;
     }
+}
+
+
+
+.footer {
+    padding: 110px 0 32px;
+    background-color: $titleColor;
+}
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 85px;
+}
+.footer__logo {
+    width: 150px;
+    height: 150px;
+}
+.footer__link {
+    color: $mainColor;
+    transition: $trans;
+
+    &:hover {
+        color: $hoverColor;
+    }
+}
+.reviews {
+    max-width: 200px;
+}
+.reviews__item {
+    margin-bottom: 35px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.vacancy {
+    max-width: 170px;
+}
+.vacancy__item {
+    margin-bottom: 35px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.contacts__item {
+    margin-bottom: 35px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.footer__media {
+    display: flex;
+    justify-content: center;
 }
