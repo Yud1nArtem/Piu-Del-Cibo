@@ -401,6 +401,7 @@ button {
 .info__content_top {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 250px;
 }
 .content__top_left {
     color: #000;
@@ -409,6 +410,7 @@ button {
     .content__top_title {
         margin-bottom: 50px;
         font-size: 35px;
+        font-weight: 400;
         text-align: center;
     }
     .content__top_text {
@@ -416,13 +418,18 @@ button {
         font-size: 18px;
     }
 }
+.content__text {
+    line-height: 30px;
+}
 .content__top_right {
-    width: 60%;
+    width: 58%;
 }
 .slider {
-    transform: translateX(100px);
     min-width: 0;
     position: relative;
+}
+.content__top_slider {
+    transform: translateX(100px);
 }
 .slide__img {
     height: 100%;
@@ -450,7 +457,15 @@ button {
     border-right-color: rgba(255, 255, 255, .55);
     border-bottom-color: rgba(255, 255, 255, .4);
     border-left-color: rgba(255, 255, 255, .55);
-    transform: translateY(-112px);
+    transform: translateY(-126px);
+    transition: $trans;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, .4);
+    }
+    &:focus {
+        background-color: rgba(255, 255, 255, .3);
+    }
 }
 .content__top_slider .slick-prev {
     left: 0;
@@ -459,4 +474,130 @@ button {
 .content__top_slider .slick-next {
     left: 69px;
     background-image: url(../images/стрелкаСлайдерВправо.svg);
+}
+.slider .slick-arrow.slick-disabled {
+    /* background-color: rgba(0, 0, 0, .2); */
+    background-image: none;
+}
+.content__top_slider .slick-dots {
+    margin-top: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content__top_slider .slick-dots li {
+    margin-left: 15px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+.content__top_slider .slick-dots button {
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    background-color: $titleColor;
+    border-radius: 50%;
+    transition: $trans;
+
+    &:hover {
+        background-color: #918080;
+    }
+    &:focus {
+        background-color: #7D6D6D;
+    }
+}
+
+.info__content_bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 250px;
+}
+.content__bottom_left {
+    width: 58%;
+}
+.content__bottom_right {
+    color: #000;
+    width: 40%;
+
+    .content__bottom_title {
+        margin-bottom: 50px;
+        font-size: 35px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .content__bottom_text {
+        margin-bottom: 50px;
+        font-size: 18px;
+        text-align: right;
+    }
+}
+.content__bottom_slider {
+    transform: translateX(-100px);
+}
+.content__bottom_slider .slick-arrow {
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    font-size: 0;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(4px);
+    border: 1px solid;
+    border-top-color: rgba(255, 255, 255, .65);
+    border-right-color: rgba(255, 255, 255, .55);
+    border-bottom-color: rgba(255, 255, 255, .4);
+    border-left-color: rgba(255, 255, 255, .55);
+    transform: translateY(-126px);
+    transition: $trans;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, .4);
+    }
+    &:focus {
+        background-color: rgba(255, 255, 255, .3);
+    }
+}
+.content__bottom_slider .slick-prev {
+    left: 0;
+    background-image: url(../images/стрелкаСлайдерВлево.svg);
+}
+.content__bottom_slider .slick-next {
+    left: 69px;
+    background-image: url(../images/стрелкаСлайдерВправо.svg);
+}
+.slider .slick-arrow.slick-disabled {
+    /* background-color: rgba(0, 0, 0, .2); */
+    background-image: none;
+}
+.content__bottom_slider .slick-dots {
+    margin-top: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content__bottom_slider .slick-dots li {
+    margin-left: 15px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+.content__bottom_slider .slick-dots button {
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    background-color: $titleColor;
+    border-radius: 50%;
+    transition: $trans;
+
+    &:hover {
+        background-color: #918080;
+    }
+    &:focus {
+        background-color: #7D6D6D;
+    }
 }
