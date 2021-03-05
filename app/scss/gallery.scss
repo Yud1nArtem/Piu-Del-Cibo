@@ -37,21 +37,31 @@ button {
 .albums__header_content-left {
     width: 40%;
     height: 100vh;
-    background-image: url(../images/Albums/img-7973.png);
     background-repeat: no-repeat;
     background-size: cover;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    /* transform: translateX(-52%); */
     box-shadow: 10px 10px 20px rgba(0, 0, 0, .2);
     opacity: 0;
     z-index: 99;
     position: absolute;
+    transition: all 2s;
 }
 .albums__header_content-left.active {
     opacity: 1;
-    z-index: 100;
-    position: static;
+}
+.albums__header_content-left.first {
+    background-image: url(../images/Albums/Baners/img-7973.png);
+}
+.albums__header_content-left.second {
+    background-image: url(../images/Albums/Baners/bg2.jpg);
+    background-position: -400px 0;
+}
+.albums__header_content-left.third {
+    background-image: url(../images/Albums/Baners/img-8015.jpg);
+}
+.albums__header_content-left.fourth {
+    background-image: url(../images/Albums/Baners/mastier-klass-6421.jpg);
 }
 .header__content_left-wrapper {
     width: 100%;
@@ -63,6 +73,7 @@ button {
 }
 .header__content_left-title {
     margin-bottom: 40px;
+    width: 95%;
     font-size: 30px;
     font-weight: 600;
     text-align: center;
@@ -260,7 +271,39 @@ button {
         width: 14px;
     }
 }
+.btn__close {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: none;
 
+    &_item {
+        width: 16px;
+        height: 1px;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.7);
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    &_item::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.7);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+}
 
 
 
@@ -560,7 +603,24 @@ button {
 
 @media (max-width: 576px) {
     .albums__header_content-left {
-        display: none;
+        width: 100%;
+        position: absolute;
+        height: 500px;
+        top: -600px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top-right-radius: 0;
+    }
+    .albums__header_content-left.active__mobile {
+        width: 100%;
+        position: absolute;
+        height: 500px;
+        top: 100px;
+        border-radius: 0;
+    }
+    .albums__header_content-left.second {
+        background-image: url(../images/Albums/Baners/bg2.jpg);
+        background-position: 0 0;
     }
     .albums__header_content-right {
         width: 100%;
@@ -572,6 +632,16 @@ button {
         font-size: 35px;
         margin-bottom: 50px;
         font-weight: 300;
+        transition: all 2s;
+    }
+    .header__content_right-title.active__mobile {
+        transform: translateY(500px);
+    }
+    .albums__box {
+        transition: all 2s;
+    }
+    .albums__box.active__mobile {
+        transform: translateY(500px);
     }
     .albums__box_item {
         width: 170px;
@@ -580,6 +650,62 @@ button {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .albums__header__menu-list.active__mobile {
+        display: block;
+        position: absolute;
+        z-index: 99;
+        top: -300px;
+        right: 23px;
+        padding: 25px 30px;
+        border-radius: 40px;
+        background-color: rgba(0, 0, 0, .4);
+        backdrop-filter: blur(3px);
+        transition: all 2s;
+
+        .albums__header__menu-list-item {
+            margin-left: 0;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .albums__header_menu-link {
+            color: rgb(41, 41, 41);
+            transition: 2s;
+        }
+    }
+    .albums__header__menu-list.active.active__mobile {
+        display: block;
+        position: absolute;
+        z-index: 101;
+        top: 140px;
+        right: 23px;
+        padding: 25px 30px;
+        border-radius: 40px;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(3px);
+
+        .albums__header__menu-list-item {
+            margin-left: 0;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .albums__header_menu-link {
+            color: rgb(255, 255, 255);
+            transition: $trans;
+
+            &:hover {
+                color: $hoverColor;
+            }
+        }
+    }
+    .btn__close {
+        display: block;
     }
 }
 

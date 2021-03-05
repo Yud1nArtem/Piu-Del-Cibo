@@ -10,7 +10,6 @@ $(function () {
 
 $(function () {
     $('.album__burger_menu').on('click', function () {
-        $('body').toggleClass('active');
         $('.albums__header__menu-list').toggleClass('active');
         $('.album__burger_menu').toggleClass('active');
     });
