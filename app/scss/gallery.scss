@@ -46,9 +46,11 @@ button {
     z-index: 99;
     position: absolute;
     transition: all 2s;
+    visibility: hidden;
 }
 .albums__header_content-left.active {
     opacity: 1;
+    visibility: visible;
 }
 .albums__header_content-left.first {
     background-image: url(../images/Albums/Baners/img-7973.png);
@@ -281,7 +283,11 @@ button {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(3px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid;
+    border-top-color: rgba(255, 255, 255, .65);
+    border-left-color: rgba(255, 255, 255, .5);
+    border-bottom-color: rgba(255, 255, 255, .4);
+    border-right-color: rgba(255, 255, 255, .5);
     display: none;
 
     &_item {
@@ -706,6 +712,16 @@ button {
     }
     .btn__close {
         display: block;
+        transition: $trans;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(1px);
+            border-top-color: rgba(255, 255, 255, .8);
+            border-left-color: rgba(255, 255, 255, .8);
+            border-bottom-color: rgba(255, 255, 255, .8);
+            border-right-color: rgba(255, 255, 255, .8);
+        }
     }
 }
 
