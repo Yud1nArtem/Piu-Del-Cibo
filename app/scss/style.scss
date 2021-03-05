@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 body {
-    background-color: rgb(194, 112, 112);
     font-size: 16px;
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
@@ -295,6 +294,7 @@ button {
     color: #000;
     font-size: 18px;
     box-shadow: 0 8px 50px rgba(178, 215, 148, .1);
+    border: 1px solid transparent;
     transition: all 1s;
 
     &:hover {
