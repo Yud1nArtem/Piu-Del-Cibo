@@ -57,6 +57,7 @@ function styles() {
     return src([
             'app/scss/style.scss',
             'app/scss/gallery.scss',
+            'app/scss/albumFirst.scss',
             'app/scss/variables.scss'
         ])
         .pipe(scss({outputStyle: 'compressed'}))
