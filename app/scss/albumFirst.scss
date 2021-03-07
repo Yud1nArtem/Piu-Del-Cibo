@@ -29,7 +29,6 @@ button {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
-    border: 1px solid #000;
 }
 .album__header_link {
     font-size: 18px;
@@ -39,5 +38,135 @@ button {
 
     &:hover {
         color: $hoverColor;
+    }
+}
+.album__header_menu-list-item {
+    margin-left: 66px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+.album__burger_menu-text {
+    color: #000;
+}
+.album__burger_menu-item {
+    background-color: #000;
+
+    &::before, &::after{
+        background-color: #000;
+    }
+}
+.album__burger_menu {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 22px;
+    z-index: 100;
+    transform: translateX(-20px);
+}
+.album__burger_menu-text{
+    transform: translateX(-50px);
+    padding-right: 28px;
+    transition: $trans;
+}
+.album__burger_menu-item {
+    position: absolute;
+    top: 50%;
+    width: 21px;
+    height: 1px;
+    background-color: #000;
+    transition: $trans;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        background-color: #000;
+        transition: $trans;
+    }
+    &::before {
+        top: 7px;
+        width: 30px;
+    }
+    &::after {
+        top: -7px;
+        width: 14px;
+    }
+}
+.album__burger_menu:hover .album__burger_menu-text {
+    color: $hoverColor;
+}
+.album__burger_menu:hover .album__burger_menu-item {
+    background-color: $hoverColor;
+    width: 20px;
+}
+.album__burger_menu:hover .album__burger_menu-item::before {
+    background-color: $hoverColor;
+    width: 20px;
+}
+.album__burger_menu:hover .album__burger_menu-item::after {
+    background-color: $hoverColor;
+    width: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    body.active {
+        overflow: hidden;
+    }
+    .album__burger_menu.active .album__burger_menu-text {
+        display: none;
+    }
+    .album__burger_menu.active .album__burger_menu-item {
+        width: 0;
+
+        &::before {
+            top: 0;
+            width: 30px;
+            transform: rotate(45deg);
+        }
+        &::after {
+            top: 0;
+            width: 30px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    
+    .album__header_menu-list-item {
+        margin-left: 0;
+        margin-bottom: 30px;
+    
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    .header__media_list {
+        margin-bottom: 30px;
+    }
+    .header__basket_info {
+        transform: translate(80px, 5px);
     }
 }

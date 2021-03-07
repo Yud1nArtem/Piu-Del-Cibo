@@ -214,7 +214,7 @@ button {
 .media__icon_img:hover {
     opacity: .5;
 }
-.album__burger_menu {
+.albums__burger_menu {
     cursor: pointer;
     position: relative;
     display: none;
@@ -225,29 +225,29 @@ button {
     z-index: 100;
     transform: translateX(-30px);
 
-    &:hover .album__burger_menu-text {
+    &:hover .albums__burger_menu-text {
         color: #A7DA7E;
     }
-    &:hover .album__burger_menu-item {
+    &:hover .albums__burger_menu-item {
         background-color: #A7DA7E;
         width: 20px;
     }
-    &:hover .album__burger_menu-item::before {
+    &:hover .albums__burger_menu-item::before {
         background-color: #A7DA7E;
         width: 20px;
     }
-    &:hover .album__burger_menu-item::after {
+    &:hover .albums__burger_menu-item::after {
         background-color: #A7DA7E;
         width: 20px;
     }
 }
-.album__burger_menu-text {
+.albums__burger_menu-text {
     transform: translateX(-40px);
     padding-right: 25px;
     color: #000;
     transition: $trans;
 }
-.album__burger_menu-item {
+.albums__burger_menu-item {
     position: absolute;
     top: 50%;
     width: 21px;
@@ -485,15 +485,15 @@ button {
             }
         }
     }
-    .album__burger_menu {
+    .albums__burger_menu {
         display: flex;
         z-index: 100;
     }
-    .album__burger_menu {
+    .albums__burger_menu {
         display: flex;
         z-index: 100;
     }
-    .album__burger_menu.active .album__burger_menu-item {
+    .albums__burger_menu.active .albums__burger_menu-item {
         width: 0;
 
         &::before {
@@ -507,7 +507,7 @@ button {
             transform: rotate(-45deg);
         }
     }
-    .album__burger_menu.active .album__burger_menu-text {
+    .albums__burger_menu.active .albums__burger_menu-text {
         display: none;
     }
 

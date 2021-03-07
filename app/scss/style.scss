@@ -955,9 +955,8 @@ button {
     .header__media_list {
         margin-bottom: 30px;
     }
-    .header__basket_info {
-        transform: translate(80px, 5px);
-    }
+
+
     .header__content_wrapper {
         display: flex;
         justify-content: center;
@@ -969,7 +968,20 @@ button {
     }
 
 
-
+    .header__basket_info {
+        opacity: 0;
+        top: 50%;
+        left: 150%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translate(0, -50%);
+        padding: 0 15px;
+        width: 200px;
+        height: 30px;
+        border-radius: 20px;
+        transition: opacity 1s;
+    }
     .header__basket {
         display: inline-block;
         position: relative;
@@ -988,20 +1000,6 @@ button {
             height: 30px;
             border-radius: 20px;
         }
-    }
-    .header__basket_info {
-        opacity: 0;
-        top: 50%;
-        left: 150%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transform: translate(0, -50%);
-        padding: 0 15px;
-        width: 200px;
-        height: 30px;
-        border-radius: 20px;
-        transition: opacity 1s;
     }
     .header__basket_title {
         display: none;
