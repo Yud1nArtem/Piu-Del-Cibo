@@ -25,11 +25,6 @@ input, button, select, textarea {
 button {
     cursor: pointer;
 }
-.container {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 25px;
-}
 .albums__header__wrapper {
     display: flex;
     justify-content: space-between;
@@ -86,6 +81,9 @@ button {
     background: #fff;
     color: #000;
     transition: $trans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         border-color: rgb(234, 234, 234);

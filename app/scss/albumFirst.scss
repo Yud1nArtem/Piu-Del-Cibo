@@ -1,0 +1,43 @@
+@import "variables.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    color: $mainColor;
+}
+a {
+    text-decoration: none;
+}
+ul, li {
+    list-style: none;
+}
+input, button, select, textarea {
+    outline: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+button {
+    cursor: pointer;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: 1px solid #000;
+}
+.album__header_link {
+    font-size: 18px;
+    font-weight: medium;
+    color: #000;
+    transition: $trans;
+
+    &:hover {
+        color: $hoverColor;
+    }
+}
