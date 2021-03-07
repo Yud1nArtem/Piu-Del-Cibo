@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #fff;
     font-size: 16px;
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
@@ -29,6 +28,9 @@ button {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+}
+.album__header_top {
+    padding: 50px 0 100px 0;
 }
 .album__header_link {
     font-size: 18px;
@@ -112,6 +114,63 @@ button {
     background-color: $hoverColor;
     width: 20px;
 }
+.album__content {
+    padding: 0 0 100px 0;
+}
+.album__title {
+    color: #000;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.album__counter_photoes {
+    color: #000;
+    text-align: right;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .25);
+    margin-bottom: 40px;
+}
+.album__box_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.album__box_item {
+    min-width: 140px;
+    width: 30%;
+    margin-bottom: 60px;
+}
+.album__item_link {
+    position: relative;
+}
+.album__item_img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+.album__search {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,8 +224,5 @@ button {
     }
     .header__media_list {
         margin-bottom: 30px;
-    }
-    .header__basket_info {
-        transform: translate(80px, 5px);
     }
 }

@@ -42,10 +42,11 @@ function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
-        'app/js/albums.js',
         'app/js/main.js',
+        'app/js/albums.js',
         'app/js/burger.js',
-        'app/js/slider.js'
+        'app/js/slider.js',
+        'app/js/albumCounter.js',
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())

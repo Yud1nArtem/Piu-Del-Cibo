@@ -985,7 +985,7 @@ button {
     .header__basket {
         display: inline-block;
         position: relative;
-        transform: translate(-10px, -3px);
+        transform: translate(0, -3px);
     
         &:hover .header__basket_info {
             opacity: 1;
