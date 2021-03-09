@@ -1,4 +1,4 @@
 $(function () {
     let a = $('.album__box_item').length
-    console.log(a)
+    document.getElementById('count').innerHTML = a;
 });
