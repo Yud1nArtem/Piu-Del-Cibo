@@ -46,6 +46,8 @@ function scripts() {
         'app/js/albums.js',
         'app/js/burger.js',
         'app/js/slider.js',
+        'app/js/topBtn.js',
+        'app/js/menuScroll.js',
         'app/js/albumCounter.js',
     ])
     .pipe(concat('main.min.js'))
