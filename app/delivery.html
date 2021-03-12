@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-   <header class="header">
-        <div class="header__top">
+   <header class="header delivery__header">
+        <div class="header__top delivery__header_top">
             <div class="container">
                 <div class="header__menu_mobile">
                     <a href="index.html">
@@ -25,33 +25,11 @@
                 </div>
                 <div class="header__top_wrapper">
                     <div class="header__top_inner">
-                        <div class="header__top_info">
-                            <a href="#">
-                                <img class="header__logo logo" src="images/SVG/logo 1.svg" alt="Лого">
-                            </a>
-                            <nav class="header__menu_info">
-                                <ul class="header__list">
-                                    <li class="header__list_item">
-                                        <a class="header__list_link header__list_number" href="tel:89261032103">8 (926) 103-2-103</a>
-                                    </li>
-                                    <li class="header__list_item">
-                                        <a class="header__list_link header__list_number" href="tel:84984811881">8 (498) 481-18-81</a>
-                                    </li>
-                                    <li class="header__list_item">
-                                        <a class="header__list_link" href="https://calendar.google.com/calendar/u/0/r" target="_blank">ПН-ВС: С 12:00 ДО 23:00</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="header__search_box">
-                                <input class="header__search" placeholder="Введите...">
-                                <img class="search__icon" src="images/SVG/SearchIcon.svg" alt="Поиск">
-                            </div>
-                        </div>
                         <div class="header__top_menu">
                             <nav class="header_menu">
                                 <ul class="header__menu_list">
-                                    <li class="header__menu_list-item">
-                                        <a href="#" class="header__menu_link">Доставка</a>
+                                    <li class="header__menu_list-item delivery__header_list-item">
+                                        <a href="index.html" class="header__menu_link">Главная</a>
                                     </li>
                                     <li class="header__menu_list-item">
                                         <a href="discounts.html" class="header__menu_link">Акции</a>
@@ -103,28 +81,106 @@
                 </div>
             </div>
         </div>
-        <div class="header__content">
+        <div class="delivery__content">
             <div class="container">
-                <div class="header__content_wrapper">
-                    <div class="header__content_left">
-                        <h1 class="header__content_title">
-                            Piu Del Cibo
-                        </h1>
-                        <p class="header__content_subtitle">
-                            Сеть семейных кафе-пиццерий
+                <div class="delivery__content_wrapper">
+                    <div class="delivery__card">
+                        <img class="delivery__card_img" src="images/Delivery/alarm-clock--v2.png">
+                        <p class="delivery__title">Заказ</p>
+                        <p class="delivery__text">
+                            Время работы доставки:
+                            КАФЕ РАБОТАЕТ , ПН-ВС: С 12:00 ДО 23:00
                         </p>
-                        <button class="header__btn btn">Перейти в меню</button>
                     </div>
-                    <div class="header__content_right">
-                        <a class="header__content_link" href="discounts.html">
-                            <span>Перейти</br>к скидкам</span>
-                            <img class="header__content_link-arrow" src="images/SVG/Link arrow.svg" alt="К скидкам">
-                        </a>
+                    <div class="delivery__card">
+                        <img class="delivery__card_img" src="images/Delivery/8168.png">
+                        <p class="delivery__title">Доставка</p>
+                        <p class="delivery__text">
+                            Доставка бесплатная,
+                            при исполнении
+                            минимальной суммы заказа,
+                            в зависимости от района.
+                            Время доставки по городу
+                            ДО 1 ЧАСА.
+                        </p>
+                    </div>
+                    <div class="delivery__card">
+                        <img class="delivery__card_img" src="images/Delivery/pizza.png">
+                        <p class="delivery__title">Получение</p>
+                        <p class="delivery__text">
+                            К каждому заказу суши,
+                            роллов и сетов
+                            от 500 рублей
+                            прилагается 1 набор приправ
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
    </header>
+   <section class="delivery__info">
+       <div class="container">
+           <div class="delivery__info_title">
+                Минимальная сумма заказа Жуковский
+           </div>
+           <div class="delivery__info_wrapper">
+               <ul class="delivery__info_list">
+                   <li class="delivery__info_list-item">
+                       <p class="delivery__info_list-text">
+                            Жуковский - 500 р
+                       </p>
+                   </li>
+                   <li class="delivery__info_list-item">
+                       <p class="delivery__info_list-text">
+                            Кратово - 1000 р
+                       </p>
+                   </li>
+                   <li class="delivery__info_list-item">
+                       <p class="delivery__info_list-text">
+                            Быково - 1000 р
+                       </p>
+                   </li>
+                   <li class="delivery__info_list-item">
+                       <p class="delivery__info_list-text">
+                            Верея - 1000 р
+                       </p>
+                   </li>
+                   <li class="delivery__info_list-item">
+                       <p class="delivery__info_list-text">
+                            Ильинский - 1000 р
+                       </p>
+                   </li>
+                   <li class="delivery__info_list-item">
+                       <p class="delivery__info_list-text">
+                            Удельная - 1000 р
+                       </p>
+                   </li>
+                   <li class="delivery__info_list-item">
+                       <p class="delivery__info_list-text">
+                            Спартак - 1000 р
+                       </p>
+                   </li>
+               </ul>
+               <div class="delivery__info_text">
+                   <p class="delivery__info_text-item">
+                        Уже долгое время рестораны доставки еды на дом пользуются огромной популярностью, и для этого есть множество причин:
+                   </p>
+                   <p class="delivery__info_text-item">
+                        - это экономит кучу времени, избавляя вас от необходимости покупать продукты, готовить, мыть посуду;
+                   </p>
+                   <p class="delivery__info_text-item">
+                        - это позволяет организовать вкусный и красивый стол, если мероприятие стало для вас неожиданностью и времени готовить совершенно нет;
+                   </p>
+                   <p class="delivery__info_text-item">
+                        - это позволяет полноценно пообедать на работе, если нет возможности брать еду с собой из дома или ходить в кафе.
+                   </p>
+                   <p class="delivery__info_text-item">
+                        Любое блюдо, будь то пицца, суши, салаты, фруктовые, овощные и мясные нарезки, напитки – все, что вы пожелаете, может быть доставлено вам именно тогда, когда вы посчитаете нужным.
+                   </p>
+               </div>
+           </div>
+       </div>
+   </section>
 
 
 
@@ -137,7 +193,7 @@
 
 
 
-   
+
    <script src="js/main.min.js"></script>
 </body>
 </html>
